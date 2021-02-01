@@ -1,6 +1,8 @@
 prometheus-awair-exporter
 =========================
 
+![Some example metrics in Grafana](metrics.png)
+
 A simple [Awair][] exporter for [Prometheus][].
 
 For example:
