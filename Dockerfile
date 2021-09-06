@@ -8,4 +8,4 @@ COPY --chown=app src /app
 WORKDIR /app
 USER app
 
-CMD /app/serve.py
+CMD ["/app/serve.py"]
