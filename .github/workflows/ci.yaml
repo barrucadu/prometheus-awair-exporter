@@ -7,23 +7,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
-      - name: Setup
-        run: |
-          set -ex
-          python -m pip install --upgrade pip
-          pip install flake8 black
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.16'
       - name: Lint
         run: |
           set -ex
-          flake8 src
-          black src
+          go fmt
           git diff --exit-code
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
-      - name: Check Dependencies
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.16'
+      - name: Build
         run: |
-          pip install -r requirements-freeze.txt
+          go build
