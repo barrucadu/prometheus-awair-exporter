@@ -49,8 +49,14 @@ awair_voc_ethanol_raw{sensor="living-room"} 38
 awair_voc_h2_raw{sensor="living-room"} 28
 ```
 
-Enable the Local API for your Awair devices and set the `SENSORS` env
-var to a list of the form `name1=ip1,name2=ip2,...`.
+Usage:
+
+```
+go build
+./prometheus-awair-exporter --sensor living-room:10.0.20.117 --sensor bedroom:10.0.20.120
+```
+
+Make sure to enable the Local API for your Awair devices.
 
 [Awair]: https://uk.getawair.com/
 [Prometheus]: https://prometheus.io/
