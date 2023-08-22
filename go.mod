@@ -1,6 +1,6 @@
 module github.com/barrucadu/prometheus-awair-exporter
 
-go 1.17
+go 1.20
 
 require (
 	github.com/jessevdk/go-flags v1.5.0
