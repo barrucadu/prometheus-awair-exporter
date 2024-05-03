@@ -26,7 +26,7 @@
         version = "0.0.0";
 
         src = gitignore.lib.gitignoreSource ./.;
-        vendorHash = "sha256-XDHUotANzNtmm5C9A3Ccav90zi3AYYz7zxfGUEJskec=";
+        vendorHash = "sha256-N0qAqEcs9zO29SO0znzzRLqp+JcnMSAdYY2dQoMniFY=";
 
         doCheck = false;
 
